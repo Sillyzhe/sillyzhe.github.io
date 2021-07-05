@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Silly Zhe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="傻哲 Github 上的个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Silly Zhe">
+<meta property="og:url" content="http://sillyzhe.github.io/index.html">
+<meta property="og:site_name" content="Silly Zhe">
+<meta property="og:description" content="傻哲 Github 上的个人博客">
+<meta property="og:locale">
+<meta property="article:author" content="Silly Zhe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Silly Zhe" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Silly Zhe</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://sillyzhe.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hexo发生error：spawn failed错误的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/07/05/hexo%E5%8F%91%E7%94%9Ferror%EF%BC%9Aspawn%20failed%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2021-07-05T08:06:24.000Z" itemprop="datePublished">Jul 5, 2021</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/05/hexo%E5%8F%91%E7%94%9Ferror%EF%BC%9Aspawn%20failed%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">hexo发生error：spawn failed错误的解决方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>问题描述：
+先是出现错误：
+error：spawn failed…
+然后经过一些博客的操作会出现以下问题：
+fatal: cannot lock ref ‘HEAD’: unable to resolve reference HEAD: Invalid argument error: src refspec
+或者：
+error: src refspec HEAD does not match any.等等
+总结一下：
+问题大多是因为git进行push或者hexo d的时候改变了一些.deploy_git文件下的内容。</p>
+<p>解决办法：
+删除.deploy_git文件夹;
+输入git config --global core.autocrlf false
+然后，依次执行：
+hexo clean
+hexo g
+hexo d
+问题解决。暴力直接，有效。</p>
+<p>解决方式二：有可能是你的git repo配置地址不正确,可以将http方式变更为ssh方式</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sillyzhe.github.io/2021/07/05/hexo%E5%8F%91%E7%94%9Ferror%EF%BC%9Aspawn%20failed%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" data-id="ckqqdiau30004f77k3hdm4i4m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-pwa部署sw没有生效" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/07/05/pwa%E9%83%A8%E7%BD%B2sw%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88/" class="article-date">
+  <time datetime="2021-07-05T07:34:36.000Z" itemprop="datePublished">Jul 5, 2021</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/05/pwa%E9%83%A8%E7%BD%B2sw%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88/">pwa部署sw没有生效</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="pwa部署无法生效-Service-Worker其实注册成功了，但是在页面中却不生效">pwa部署无法生效,Service Worker其实注册成功了，但是在页面中却不生效</h1>
+<p>Scope规定了Service Worker的作用（URL）范围。</p>
+<p>同时，scope的默认值为./（注意，这里所有的相对路径不是相对于页面，而是相对于sw.js脚本的）。因此，navigator.serviceWorker.register(‘/static/home/js/sw.js’)代码中的scope实际上是/static/home/js，Service Worker也就注册在了/static/home/js路径下，显然无法在/home下生效。
+这种情况非常常见：我们会把sw.js这样的文件放置在项目的静态目录下（例如文中的/static/home/js），而并非页面路径下。显然，要解决这个问题需要设置相应的scope。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sillyzhe.github.io/2021/07/05/pwa%E9%83%A8%E7%BD%B2sw%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88/" data-id="ckqqdiau40005f77kbiln35np" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pwa/" rel="tag">pwa</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-app分享小程序将分享图片压缩到指定的大小" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/03/app%E5%88%86%E4%BA%AB%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%86%E5%88%86%E4%BA%AB%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E5%A4%A7%E5%B0%8F/" class="article-date">
+  <time datetime="2019-07-03T01:42:00.000Z" itemprop="datePublished">Jul 3, 2019</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/03/app%E5%88%86%E4%BA%AB%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%86%E5%88%86%E4%BA%AB%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E5%A4%A7%E5%B0%8F/">app分享小程序将分享图片压缩到指定的大小</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>app分享跳转至小程序图片规定大小不得超过128kb，按固定分辨率压缩可能会出现图片大小不一致导致图片不清晰的情况。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">Bitmap压缩到指定大小：</span><br><span class="line"></span><br><span class="line">private void imageZoom() &#123;</span><br><span class="line">    //图片允许最大空间 单位：KB</span><br><span class="line">    double maxSize =128.00;</span><br><span class="line">    //将bitmap放至数组中，意在bitmap的大小（与实际读取的原文件要大）</span><br><span class="line">    ByteArrayOutputStream baos = new ByteArrayOutputStream();</span><br><span class="line">    bitMap.compress(Bitmap.CompressFormat.JPEG, 100, baos);</span><br><span class="line">    byte[] b = baos.toByteArray();</span><br><span class="line">    //将字节换成KB</span><br><span class="line">    double mid = b.length/1024;</span><br><span class="line">    //判断bitmap占用空间是否大于允许最大空间 如果大于则压缩 小于则不压缩</span><br><span class="line">    if (mid &gt; maxSize) &#123;</span><br><span class="line">        //获取bitmap大小 是允许最大大小的多少倍</span><br><span class="line">        double i = mid / maxSize;</span><br><span class="line">        //开始压缩 此处用到平方根 将宽带和高度压缩掉对应的平方根倍 （1.保持刻度和高度和原bitmap比率一致，压缩后也达到了最大大小占用空间的大小）</span><br><span class="line">        bitMap = zoomImage(bitMap, bitMap.getWidth() / Math.sqrt(i),</span><br><span class="line">        bitMap.getHeight() / Math.sqrt(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    public static Bitmap zoomImage(Bitmap bgimage, double newWidth,double newHeight) &#123;</span><br><span class="line">        // 获取这个图片的宽和高</span><br><span class="line">        float width = bgimage.getWidth();</span><br><span class="line">        float height = bgimage.getHeight();</span><br><span class="line">        // 创建操作图片用的matrix对象</span><br><span class="line">        Matrix matrix = new Matrix();</span><br><span class="line">        // 计算宽高缩放率</span><br><span class="line">        float scaleWidth = ((float) newWidth) / width;</span><br><span class="line">        float scaleHeight = ((float) newHeight) / height;</span><br><span class="line">        // 缩放图片动作</span><br><span class="line">        matrix.postScale(scaleWidth, scaleHeight);</span><br><span class="line">        Bitmap bitmap = Bitmap.createBitmap(bgimage, 0, 0, (int) width,</span><br><span class="line">        (int) height, matrix, true);</span><br><span class="line">        return bitmap;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sillyzhe.github.io/2019/07/03/app%E5%88%86%E4%BA%AB%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%86%E5%88%86%E4%BA%AB%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E5%A4%A7%E5%B0%8F/" data-id="ckqqdiatt0000f77k7mh911ag" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git配置多个ssh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/01/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh/" class="article-date">
+  <time datetime="2019-07-01T07:15:41.000Z" itemprop="datePublished">Jul 1, 2019</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh/">git配置多个ssh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景">背景</h2>
+<p>当有多个git账号时，比如：</p>
+<p>a. 一个gitee，用于公司内部的工作开发；<br>
+b. 一个github，用于自己进行一些开发活动；</p>
+<h3 id="解决方法">解决方法</h3>
+<h4 id="1-生成一个公司用的SSH-Key">1.生成一个公司用的SSH-Key</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &#x27;xxxxx@company.com&#x27; -f ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
+<h4 id="2-生成一个github用的SSH-Key">2.生成一个github用的SSH-Key</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &#x27;xxxxx@qq.com&#x27; -f ~/.ssh/github_id_rsa</span><br></pre></td></tr></table></figure>
+<h4 id="3-在-ssh-目录下新建一个config文件，添加如下内容（其中Host和HostName填写git服务器的域名，IdentityFile指定私钥的路径）">3.在 ~/.ssh 目录下新建一个config文件，添加如下内容（其中Host和HostName填写git服务器的域名，IdentityFile指定私钥的路径）</h4>
+<p><img src="https://user-gold-cdn.xitu.io/2019/7/1/16bac5e8ee6eb21c?w=864&amp;h=155&amp;f=png&amp;s=11501" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_gitee_rsa</span><br><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<h4 id="4-用ssh命令分别测试">4.用ssh命令分别测试</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@gitee.com</span><br><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>分别出现以下会话既设置成功</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/7/1/16bac60b8e9f4ca1?w=752&amp;h=174&amp;f=png&amp;s=16668" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sillyzhe.github.io/2019/07/01/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh/" data-id="ckqqdiau00002f77khdwv010y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-搭建git个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/01/%E6%90%AD%E5%BB%BAgit%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2019-07-01T07:15:41.000Z" itemprop="datePublished">Jul 1, 2019</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/%E6%90%AD%E5%BB%BAgit%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">git部署个人博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>从事前端工具已经快一年了，这期间踩了不少坑，自以为记忆力不错可以记住之前犯的错。结果现实狠狠的扇了自己一巴掌，遇到过的坑已经忘得一干二净了。为了能提高自己，也为了以后可以有地方查阅到自己解决过的问题，所以打算开一个技术博客。<br>
+但是目前还没有精力自己买域名部署服务器（还是自己太垃圾了），所以利用git搭建一个个人博客就足够了。<br>
+我采用的方式是<a target="_blank" rel="noopener" href="https://pages.github.com/">git page</a> + <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a></p>
+<h3 id="所需工具">所需工具</h3>
+<ul>
+<li>创建git账号</li>
+<li>安装git bash</li>
+<li>安装node.js</li>
+</ul>
+<blockquote>
+<p>账号创建及软件安装请自行百度或谷歌（很简单，小白用户也可尝试）</p>
+</blockquote>
+<h2 id="1、创建git仓库">1、创建git仓库</h2>
+<p>注册完github后点击右上角的加好创建new repository
+<img src="https://user-gold-cdn.xitu.io/2019/7/1/16babf2b08f0b878?w=1991&amp;h=700&amp;f=png&amp;s=271708" alt=""></p>
+<p><font color=red >Respository name</font><a target="_blank" rel="noopener" href="http://xn--username-kd0mj544a.github.io">中的username.github.io</a> 的<font color=red >username</font> 一定与前面的Owner 一致，记住username后面会用到。<br>
+因为我之前创建过了，所以这里提示我当前账号已经存在该项目</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/7/1/16babfbca86fa674?w=1468&amp;h=1052&amp;f=png&amp;s=86973" alt=""></p>
+<h2 id="2、安装hexo">2、安装hexo</h2>
+<p>1 执行以下命令安装hexo</p>
+<p><code>$ sudo npm install hexo-cli -g</code></p>
+<p>2 初始化博客</p>
+<p>安装完成后我们就可以初始化博客了，如果想要把文件放到某个目录下先cd到指定目录下在执行下方命令，如果没有指定目录默认是的你的个人主目录下。（建议将初始化博客新建一个仓库，便于后期多端维护）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//这里我把文件命名为了git_blog</span><br><span class="line">$ hexo init git_blog </span><br></pre></td></tr></table></figure>
+<p>初始化好进入项目目录文件，打开git bash <code>npm install</code><br>
+这时可以先本地跑一下这个项目，看看发布后的网站长什么样子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//清空文件夹并重新生成文件</span><br><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">// 本地运行 打开浏览器输入localhost:4000进行查看</span><br><span class="line">hexo server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>看到这个页面就是初始化成功了
+<img src="https://user-gold-cdn.xitu.io/2019/7/1/16bac0b1175519dc?w=2560&amp;h=1263&amp;f=png&amp;s=994710" alt="">
+3 部署</p>
+<p>打开项目文件里的_config.yml文件</p>
+<p>拉到最下面找到deploy的选项</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sillyzhe.github.io/2019/07/01/%E6%90%AD%E5%BB%BAgit%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckqqdiauc000df77keenggi60" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pwa/" rel="tag">pwa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/pwa/" style="font-size: 10px;">pwa</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/05/hexo%E5%8F%91%E7%94%9Ferror%EF%BC%9Aspawn%20failed%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">hexo发生error：spawn failed错误的解决方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/05/pwa%E9%83%A8%E7%BD%B2sw%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88/">pwa部署sw没有生效</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/03/app%E5%88%86%E4%BA%AB%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%86%E5%88%86%E4%BA%AB%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9A%84%E5%A4%A7%E5%B0%8F/">app分享小程序将分享图片压缩到指定的大小</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/01/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh/">git配置多个ssh</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/01/%E6%90%AD%E5%BB%BAgit%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">git部署个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Silly Zhe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
